@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-  printf("Hello WebGPU\n");
+  printf("Hello wgpu-native\n");
   return 0;
 }
