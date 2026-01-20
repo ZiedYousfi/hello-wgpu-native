@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(hello-wgpu-native VERSION 0.1.0 LANGUAGES C)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 add_executable(hello-wgpu-native src/main.c)
 
 set(WGPU_NATIVE_ROOT "" CACHE PATH "Install prefix containing include/ and lib/")
