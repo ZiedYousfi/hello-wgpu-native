@@ -5,4 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(hello-wgpu src/main.c)
+add_executable(hello-wgpu-native src/main.c)
