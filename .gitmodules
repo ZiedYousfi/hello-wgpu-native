@@ -1,0 +1,3 @@
+[submodule "sdl3webgpu"]
+	path = sdl3webgpu
+	url = https://github.com/eliemichel/sdl3webgpu.git
