@@ -5,4 +5,8 @@ set(CMAKE_C_STANDARD 11)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-add_executable(hello-wgpu-native src/main.c)
+find_package(webgpu REQUIRED)
+
+add_executable(hello-wgpu-native src/main.c )
+
+target_link_libraries(hello-wgpu-native PRIVATE webgpu::webgpu)
