@@ -36,9 +36,3 @@ endif()
 
 target_include_directories(hello-wgpu-native PRIVATE "${WGPU_INCLUDE_DIR}")
 target_link_libraries(hello-wgpu-native PRIVATE "${WGPU_LIBRARY}")
-
-if(APPLE)
-  # helps finding the dylib at runtime
-  get_filename_component(WGPU_LIBDIR "${WGPU_LIBRARY}" DIRECTORY)
-  set_target_properties(hello-wgpu-native PROPERTIES BUILD_RPATH "${WGPU_LIBDIR}")
-endif()
