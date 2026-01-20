@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include <webgpu.h>
+#include <webgpu/webgpu.h>
 #include <SDL3/SDL.h>
+#include "sdl3webgpu.h"
 
 int main(void) {
   printf("Hello wgpu-native !\n");
