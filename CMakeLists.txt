@@ -34,5 +34,11 @@ if(NOT WGPU_INCLUDE_DIR OR NOT WGPU_LIBRARY)
   )
 endif()
 
+find_library(SDL3 NAMES SDL3 PATHS /opt/homebrew/lib /usr/local/lib /usr/lib)
+
+if(NOT SDL3)
+  message(FATAL_ERROR "SDL3 not found.")
+endif()
+
 target_include_directories(hello-wgpu-native PRIVATE "${WGPU_INCLUDE_DIR}")
-target_link_libraries(hello-wgpu-native PRIVATE "${WGPU_LIBRARY}")
+target_link_libraries(hello-wgpu-native PRIVATE "${WGPU_LIBRARY}" "${SDL3}")
