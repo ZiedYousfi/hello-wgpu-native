@@ -8,6 +8,8 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 add_executable(hello-wgpu-native src/main.c)
 
+add_subdirectory(sdl3webgpu)
+
 set(WGPU_NATIVE_ROOT
     ""
     CACHE PATH "Install prefix containing include/ and lib/")
